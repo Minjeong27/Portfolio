@@ -2,9 +2,11 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>PORTFOLIO</title>
+  <title>PORTFOLIO_MJ</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/mobile-mockup실습.css">
+  <link rel="stylesheet" href="css/device.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
       <li class="btn1"><a href="#none" data-scroll="" class="visible"><span class="text_over"
             style="display: none;">Profile</span><span class="dot"></span></a></li>
       <li class="btn2"><a href="#none" data-scroll="" class="visible"><span class="text_over"
-            style="display: inline-block;">Webdesign</span><span class="dot dothover"></span></a></li>
+            style="display: none;">Webdesign</span><span class="dot"></span></a></li>
       <li class="btn3"><a href="#none" data-scroll="" class="visible"><span class="text_over"
             style="display: none;">Publishing</span><span class="dot"></span></a></li>
       <li class="btn4"><a href="#none" data-scroll="" class="visible"><span class="text_over"
@@ -191,8 +193,8 @@
   <!--___________________________________COVER_____________________________________-->
   
   <div class="cover">
-    <h1>WEB DESIGNER & PUBLISHER</h1>
-    <video src="image/star.mov" muted autoplay loop></video> <!-- autoplay 추가 -->
+    <h1 id="typing1">Web Designer & Publisher &nbsp;</h1>
+    <video src="image/star.mov" muted loop></video> <!-- autoplay 추가 -->
   </div>
   <!--___________________________________1PAGE_____________________________________-->
  
@@ -202,6 +204,7 @@
         <h2>PROFILE</h2>
         <div class="profile">
           <div class="profile_left">
+            <p class="cont_date"></p> <!--현재날짜-->
             <div class="photo"><img src="image/profile1.jpg" alt="">
             </div>
             <div class="text">
@@ -264,11 +267,11 @@
                 <li><a href="#none"><img src="image/graphic2.png" alt=""><p>3D 드로잉</p></a></li>
                 <li><a href="#none"><img src="image/graphic3.png" alt=""><p>캐릭터 드로잉</p></a></li>
                 <li><a href="#none"><img src="image/graphic4.png" alt=""><p>화장품 배너 디자인</p></a></li>
-                <li><a href="#none"><img src="image/graphic5.png" alt=""><p>카드 홍보 디자인</p></a></li>
+                <li><a href="#none"><img src="image/graphic5.png" alt=""><p>인물 드로잉</p></a></li>
                 <li><a href="#none"><img src="image/graphic6.png" alt=""><p>궁 일러스트</p></a></li>
                 <li><a href="#none"><img src="image/graphic7.png" alt=""><p>다이어리 꾸미기</p></a></li>
-                <li><a href="#none"><img src="image/graphic8.png" alt=""><p>엘지 이벤트창&배너</p></a></li>
-                <li><a href="#none"><img src="image/graphic9.png" alt=""><p>인물 드로잉</p></a></li>
+                <li><a href="#none"><img src="image/graphic8.png" alt=""><p>카드 홍보 디자인</p></a></li>
+                <li><a href="#none"><img src="image/graphic9.png" alt=""><p>엘지 이벤트창&배너</p></a></li>
                 <li><a href="#none"><img src="image/graphic10.png" alt=""><p>10</p></a></li>
                 <li><a href="#none"><img src="image/graphic10.png" alt=""><p>11</p></a></li>
                 <li><a href="#none"><img src="image/graphic10.png" alt=""><p>12</p></a></li>
@@ -306,11 +309,11 @@
 
             <li id="tab2">  
               <ul class="graphic_list clear">
-                <li><a href="#none"><img src="image/uiux1.png" alt=""><p>메인페이지 시안 - 입생로랑</p></a></li>
+                <li><a href="#none"><img src="image/uiux5.png" alt=""><p>메인페이지 시안 - 해피바스</p></a></li>
                 <li><a href="#none"><img src="image/uiux2.png" alt=""><p>메인페이지 시안 - CJ AI CENTER</p></a></li>
-                <li><a href="#none"><img src="image/uiux3.png" alt=""><p>메인페이지 시안 - 대관령 양떼목장</p></a></li>
-                <li><a href="#none"><img src="image/uiux1.png" alt=""><p>04</p></a></li>
-                <li><a href="#none"><img src="image/uiux1.png" alt=""><p>05</p></a></li>
+                <li><a href="#none"><img src="image/uiux3.png" alt=""><p>메인페이지 시안 - 배스킨라빈스</p></a></li>
+                <li><a href="#none"><img src="image/uiux4.png" alt=""><p>메인페이지 시안 - 대관령 양떼목장</p></a></li>
+                <li><a href="#none"><img src="image/uiux1.png" alt=""><p>메인페이지 시안 - 입생로랑</p></a></li>
                 <li><a href="#none"><img src="image/uiux1.png" alt=""><p>06</p></a></li>
                 <li><a href="#none"><img src="image/uiux1.png" alt=""><p>07</p></a></li>
                 <li><a href="#none"><img src="image/uiux1.png" alt=""><p>08</p></a></li>
@@ -475,9 +478,56 @@
     <div class="page5 page" id="mobile">
       <div class="page_in">
         <h2>MOBILE WEB</h2>
+        <div class="mobile_text">
+          <h3>FIRST GARDEN</h3>
+          <span>MAIN PAGE + SUB PAGE</span>
+          <h3>TOOL</h3>
+          <span>HTML&CSS&JQuery</span>
+          <div class="gage">100% Personal Work</div>
+        </div>
+        <div class="mobile_btn">
+          <ul>
+            <li><a href="#">About Design</a></li>
+            <li class="btn mobile3"><a href="#">Mobile View</a></li>
+              <div class="pop">
+                <div class="c3">
+                  <!-- Mockup Start -->
+                  <div class="mockup">
+                    <div class="mobile-mockup">
+                      <div class="camera">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="volume">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="power">
+                        <span></span>
+                      </div>
+                      <div class="home-btn">
+                        <span></span>
+                      </div>
+                      <div class="iframe-url">
+                        <!-- insert image or iframe -->
+                        <iframe src="https://mobile-firstgarden.netlify.app" frameborder="0"></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Mockup End -->
+                </div>
+                
+                <a href="#" class="close"><img src="image/close.png" alt="close"></a><!-- 닫기버튼 -->
+          
+              </div>
+          </ul>
+        </div>
+
 
         <img src="image/모바일-퍼스트가든-.png" alt="">
-        <h3>FIRST GARDEN</h3>
+
         
   
   
@@ -505,19 +555,43 @@
   
       </div>
     </div>
+
   </section>
-  
-  <!--___________________________________ _____________________________________-->
-
-
-
-
-
-
-
+  <footer>
+    <!-- <h2 id="typing2"></h2> -->
+  </footer>
 
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-migrate-1.4.1.min.js"></script>
   <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
   <script src="js/portfolio.js"></script>
+  <script src="js/typeit.min.js"></script>
+  <script>
+      window.instance = new TypeIt("#typing1", {
+          speed: 100
+        })
+          .type("")
+          .pause(500)
+          .delete(4)
+          .pause(500)
+          .type("ring.")
+          .pause(500)
+          .delete()
+          .pause(500)
+          .options({
+            speed: 25
+          })
+          .type("")
+          .go();
+
+          new TypeIt("#typing2", {
+          speed: 100,
+          strings:
+            "Thank you for watching...",
+          waitUntilVisible: true,
+          loop: true
+        }).go();
+
+  </script>
 </body>
 </html>

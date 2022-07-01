@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablet-mockup {
+  border: 3px solid #7e7e7e;
+  border-radius: 40px;
+  width: 900px;
+  height: 600px;
+  position: relative;
+  background-color: #292929;
+  box-shadow: 5px 5px 30px #b1b1b1;
+}
+
+.tablet-mockup:before {
+  content: '';
+  position: absolute;
+  width: 93.5%;
+  height: 91%;
+  border: 1px solid #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.tablet-mockup .iframe-url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 840px;
+  height: 546px;
+  position: absolute;
+  color: #222;
+  font-size: 2rem;
+  border: 1px solid #292929;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tablet-mockup .iframe-url iframe {
+  /* 화면 연결되는 부분 */
+  width: 100%;
+  height: 100%;
+}
+
+.tablet-mockup .volume {
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 100.5%;
+  left: 200px;
+}
+
+.tablet-mockup .volume span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 50px 50px 0 0;
+}
+
+.tablet-mockup .power {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  bottom: 100.5%;
+  left: 100px;
+}
+
+.tablet-mockup .power span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 50px 50px 0 0;
+}
+
+.tablet-mockup .volume span, .tablet-mockup .power span {
+  background-color: #a5a5a5;
+}
+
+.tablet-mockup .camera {
+  position: absolute;
+  width: 840px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.tablet-mockup .camera span:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #464646;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablet-mockup .camera span:nth-child(2) {
+  position: absolute;
+  top: 6px;
+  right: 340px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #464646;
+}

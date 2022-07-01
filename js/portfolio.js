@@ -28,6 +28,31 @@ $(document).ready(function () {
     }, 700);
   });
 
+/*________________________________________________________현재 날짜*/
+     
+    //Date() 클래스의 인스턴스생성
+    var objDate = new Date();
+
+    // 년 구하기
+    var year = objDate.getFullYear();
+
+    // 월 구하기
+    var month = objDate.getMonth(); //0(1월)부터 11(12월)까지의 정수값
+
+    // 일 구하기
+    var date = objDate.getDate();  //날짜(일)를 나타내는 1에서 31까지의 정수
+
+    // 요일 구하기
+    var day = objDate.getDay(); //0(일)부터 6(토)까지의 정수값 
+    var aryDay = ["일", "월", "화", "수", "목", "금", "토"];  
+    //배열을 이용해서 1개 이상의 데이터를 저장
+
+    // 년,월,일,요일 출력
+    var fulldate=year +"년 " + (month+1) + "월 " + date + "일 " + aryDay[day] + "요일" ;
+
+    //현재날짜
+    $(".cont_date").text(fulldate);
+
   /*________________________________________________________퀵버튼*/
 
   $(".quick_btn").hide();
@@ -449,9 +474,28 @@ $(document).ready(function () {
 
 
 
+  /*________________________________________________________MOBILE*/
 
 
+  $(".mobile_btn .btn").click(function(){//각 메뉴를 클릭했을때
+    $(this).next().show(); //다음 형제인 .pop을 보이게함
+    $("html").css({overflowY:"hidden"});//body스크롤없앰
+    return false;
+  });
 
+
+  $(".mobile_btn .close").click(function(){//close눌렀을때
+    $(".pop").hide(); //.pop을 안보이게함
+    $("html").css({"overflow-y":"scroll"});//body스크롤생김   
+  });
+
+  
+  /*검정 배경 클릭시 닫기*/
+  $(".mobile_btn .pop").click(function(){
+    $("html").css({"overflow-y":"scroll"});
+    $(".pop").hide();
+    return false;
+  });
 
 
 

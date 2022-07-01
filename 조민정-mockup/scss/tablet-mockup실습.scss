@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body{
+  // background-color:red;
+  height:100vh;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.tablet-mockup{
+  border:3px solid rgb(126, 126, 126);
+  border-radius:40px;
+  width:900px;
+  height:600px;
+  position:relative;
+  background-color: rgb(41, 41, 41);
+  box-shadow:5px 5px 30px rgb(177, 177, 177);
+  &:before{
+    content:'';
+    position:absolute;
+    // box-shadow:0 0 10px #000;
+    width:93.5%;
+    height:91%;
+    border:1px solid #000;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius:12px;
+    background-color: #fff;
+  }
+  .iframe-url{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:840px;
+    height:546px;
+    position:absolute;
+    color:#222;
+    font-size:2rem;
+    border:1px solid rgb(41, 41, 41);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    iframe{ /* 화면 연결되는 부분 */
+      width:100%;
+      height:100%;
+
+    }
+  }
+  .volume{
+    // border:1px solid red;
+    position:absolute;
+    width:60px;
+    height:2px;
+    bottom:100.5%;
+    left:200px;
+    span{
+      position:absolute;
+      width:100%;
+      height:2px;
+      border-radius:50px 50px 0 0;
+    }
+  }
+  .power{
+    position:absolute;
+    // border:1px solid red;
+    width:40px;
+    height:2px;
+    bottom:100.5%;
+    left:100px;
+    span{
+      position:absolute;
+      width:100%;
+      height:2px;
+      border-radius:50px 50px 0 0;
+    }
+  }
+  .volume span, .power span{
+    background-color: rgb(165, 165, 165);
+  }
+  .camera{
+    // border:1px solid red;
+    position:absolute;
+    width:840px;
+    height:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    left:50%;
+    transform:translatex(-50%);
+    span{
+
+      &:nth-child(1){
+        width:10px;
+        height:10px;
+        border-radius:50%;
+        background-color:rgb(70, 70, 70);
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      &:nth-child(2){
+        position:absolute;
+        top:6px;
+        right:340px;
+        width:6px;
+        height:6px;
+        border-radius:50%;
+        background-color:rgb(70, 70, 70);
+      }
+    }
+  }
+}
+
