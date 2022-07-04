@@ -1,20 +1,37 @@
 $(document).ready(function () {
 
-  /*________________________________________________________스크롤 */
+  /*____________________________________________________스크롤 */
 
   //스크롤바가 이동될때마다 스크롤위치값 나타내기
   $(window).scroll(function () {
     $("#txt1").text($(this).scrollTop());
   });
 
-  /*________________________________________________________TOP버튼*/
+
+
+/*__________________________________________________nav메뉴 */
+
+  //일정 스크롤 이상에서 메뉴바 나타나기
+
+  $(window).scroll(function () {
+
+    if ($(this).scrollTop() >= 800) {
+      $("header").css({"margin-top":"0px","transition":"0.8s"});
+    } else {
+      $("header").css({"margin-top":"-80px","transition":"0.4s"});
+    }
+  });
+  
+
+
+  /*____________________________________________________TOP버튼*/
 
   $(".top_btn").hide(); //탑버튼 숨기기
 
   //스크롤이 980이상일때 TOP버튼 보이게 하고 스크롤을 올리면 다시 숨김
   $(window).scroll(function () {
 
-    if ($(this).scrollTop() >= 980) {
+    if ($(this).scrollTop() >= 900) {
       $(".top_btn").fadeIn();
     } else {
       $(".top_btn").fadeOut();
@@ -28,7 +45,7 @@ $(document).ready(function () {
     }, 700);
   });
 
-/*________________________________________________________현재 날짜*/
+/*_________________________________________________현재 날짜*/
      
     //Date() 클래스의 인스턴스생성
     var objDate = new Date();
@@ -53,7 +70,7 @@ $(document).ready(function () {
     //현재날짜
     $(".cont_date").text(fulldate);
 
-  /*________________________________________________________퀵버튼*/
+  /*___________________________________________________퀵버튼*/
 
   $(".quick_btn").hide();
 
@@ -69,42 +86,42 @@ $(document).ready(function () {
 
   $(".quick_btn .btn1").click(function () {
     $("body,html").animate({
-      scrollTop: "990px"
+      scrollTop: "940px"
     }, 700);
   });
   $(".quick_btn .btn2").click(function () {
     $("body,html").animate({
-      scrollTop: "2070px"
+      scrollTop: "1960px"
     }, 700);
   });
   $(".quick_btn .btn3").click(function () {
     $("body,html").animate({
-      scrollTop: "3140px"
+      scrollTop: "2940px"
     }, 700);
   });
   $(".quick_btn .btn4").click(function () {
     $("body,html").animate({
-      scrollTop: "4210px"
+      scrollTop: "3950px"
     }, 700);
   });
   $(".quick_btn .btn5").click(function () {
     $("body,html").animate({
-      scrollTop: "5290px"
+      scrollTop: "4950px"
     }, 700);
   });
   $(".quick_btn .btn6").click(function () {
     $("body,html").animate({
-      scrollTop: "6370px"
+      scrollTop: "5950px"
     }, 700);
   });
 
 
-  /*________________________________________________________스크롤이벤트*/
+  /*________________________________________________스크롤이벤트*/
 
   $(window).scroll(function () {
 
     /*____________________________1 page___________________________*/
-    if ($(this).scrollTop() >= 900 && $(this).scrollTop() < 2000) {
+    if ($(this).scrollTop() >= 700 && $(this).scrollTop() < 1700) {
       $(".page1 h2").css({
         "left": "20%",
         "top": "8%",
@@ -116,6 +133,17 @@ $(document).ready(function () {
       $(".quick_btn ul .btn1").find(">a>.text_over").css({
         "display": "inline-block"
       });
+      $(".profile_left").css({"left":"0px","opacity":"1","transition":"1.5s"})
+      $(".profile_").css({"left":"0px","opacity":"1","transition":"1.5s"})
+      $(".bar_in1").css({"width":"90%","transition":"2s"});
+      $(".bar_in2").css({"width":"85%","transition":"2s"});
+      $(".bar_in3").css({"width":"90%","transition":"2s"});
+      $(".bar_in4").css({"width":"90%","transition":"2s"});
+      $(".bar_in5").css({"width":"75%","transition":"2s"});
+      $(".a_bar_in1").css({"width":"85%","transition":"2s"});
+      $(".a_bar_in2").css({"width":"80%","transition":"2s"});
+      $(".a_bar_in3").css({"width":"85%","transition":"2s"});
+      $(".a_bar_in4").css({"width":"80%","transition":"2s"});
     } else {
       $(".page1 h2").css({
         "left": "30%",
@@ -126,10 +154,21 @@ $(document).ready(function () {
       $(".quick_btn ul .btn1").find(">a>.text_over").css({
         "display": "none"
       });
+      $(".profile_left").css({"left":"-50px","opacity":"0","transition":"1.5s"})
+      $(".bar_in1").css({"width":"0%","transition":"2s"});
+      $(".bar_in2").css({"width":"0%","transition":"2s"});
+      $(".bar_in3").css({"width":"0%","transition":"2s"});
+      $(".bar_in4").css({"width":"0%","transition":"2s"});
+      $(".bar_in5").css({"width":"0%","transition":"2s"});
+      $(".a_bar_in1").css({"width":"0%","transition":"2s"});
+      $(".a_bar_in2").css({"width":"0%","transition":"2s"});
+      $(".a_bar_in3").css({"width":"0%","transition":"2s"});
+      $(".a_bar_in4").css({"width":"0%","transition":"2s"});
+
     }
 
     /*____________________________2 page___________________________*/
-    if ($(this).scrollTop() >= 2000 && $(this).scrollTop() < 3050) {
+    if ($(this).scrollTop() >= 1700 && $(this).scrollTop() < 2700) {
       $(".page2 h2").css({
         "left": "20%",
         "top": "8%",
@@ -141,6 +180,7 @@ $(document).ready(function () {
       $(".quick_btn ul .btn2").find(">a>.text_over").css({
         "display": "inline-block"
       });
+      $("#tabmenu").css({"top":"140px","opacity":"1","transition":"1.5s"});
     } else {
       $(".page2 h2").css({
         "left": "30%",
@@ -151,10 +191,11 @@ $(document).ready(function () {
       $(".quick_btn ul .btn2").find(">a>.text_over").css({
         "display": "none"
       });
+      $("#tabmenu").css({"top":"80px","opacity":"0","transition":"1.5s"});
     }
 
     /*____________________________3 page___________________________*/
-    if ($(this).scrollTop() >= 3050 && $(this).scrollTop() < 4100) {
+    if ($(this).scrollTop() >= 2700 && $(this).scrollTop() < 3800) {
       $(".page3 h2").css({
         "left": "20%",
         "top": "8%",
@@ -166,6 +207,8 @@ $(document).ready(function () {
       $(".quick_btn ul .btn3").find(">a>.text_over").css({
         "display": "inline-block"
       });
+      $(".w_tab").css({"top":"200px","transition":"1.5s","opacity"
+      :"1"});
     } else {
       $(".page3 h2").css({
         "left": "30%",
@@ -176,10 +219,12 @@ $(document).ready(function () {
       $(".quick_btn ul .btn3").find(">a>.text_over").css({
         "display": "none"
       });
+      $(".w_tab").css({"top":"300px","transition":"1.5s","opacity"
+    :"0"});
     }
 
     /*____________________________4 page___________________________*/
-    if ($(this).scrollTop() >= 4100 && $(this).scrollTop() < 5200) {
+    if ($(this).scrollTop() >= 3800 && $(this).scrollTop() < 4700) {
       $(".page4 h2").css({
         "left": "20%",
         "top": "8%",
@@ -191,6 +236,7 @@ $(document).ready(function () {
       $(".quick_btn ul .btn4").find(">a>.text_over").css({
         "display": "inline-block"
       });
+      $(".res_right").css({"top":"300px","opacity":"1","transition":"1.5s"});
     } else {
       $(".page4 h2").css({
         "left": "30%",
@@ -201,10 +247,11 @@ $(document).ready(function () {
       $(".quick_btn ul .btn4").find(">a>.text_over").css({
         "display": "none"
       });
+      $(".res_right").css({"top":"600px","opacity":"0","transition":"1.5s"});
     }
 
     /*____________________________5 page___________________________*/
-    if ($(this).scrollTop() >= 5200 && $(this).scrollTop() < 6250) {
+    if ($(this).scrollTop() >= 4700 && $(this).scrollTop() < 5700) {
       $(".page5 h2").css({
         "left": "20%",
         "top": "8%",
@@ -215,7 +262,9 @@ $(document).ready(function () {
       $(".quick_btn .btn5").find(">a>.dot").addClass("dothover");
       $(".quick_btn ul .btn5").find(">a>.text_over").css({
         "display": "inline-block"
-      });
+      })
+      $(".page5 img").css({"top":"150px","opacity":"1","transition":"1.5s"});
+      $(".mobile_left").css({"top":"350px","opacity":"1","transition":"1.5s"});
     } else {
       $(".page5 h2").css({
         "left": "30%",
@@ -226,10 +275,12 @@ $(document).ready(function () {
       $(".quick_btn ul .btn5").find(">a>.text_over").css({
         "display": "none"
       });
+      $(".page5 img").css({"top":"300px","opacity":"0","transition":"1.5s"});
+      $(".mobile_left").css({"top":"500px","opacity":"0","transition":"1.5s"});
     }
 
     /*____________________________6 page___________________________*/
-    if ($(this).scrollTop() >= 6250) {
+    if ($(this).scrollTop() >= 5700) {
       $(".page6 h2").css({
         "left": "20%",
         "top": "8%",
@@ -374,17 +425,17 @@ $(document).ready(function () {
 
   //태블릿 화면(오버시 화면 올라가게)____________________
   $(".w_tab_slide ul li:nth-child(1)").mouseenter(function () {
-    $(this).css({"background-position":"0 100%","transition":"10s"});
+    $(this).css({"background-position":"0 100%","transition":"6s"});
   });
   $(".w_tab_slide ul li:nth-child(1)").mouseleave(function () {
-    $(this).css({"background-position":"0 0","transition":"2s"});
+    $(this).css({"background-position":"0 0","transition":"1.5s"});
   });
 
   $(".w_tab_slide ul li:nth-child(2)").mouseenter(function () {
-    $(this).css({"background-position":"0 100%","transition":"10s"});
+    $(this).css({"background-position":"0 100%","transition":"6s"});
   });
   $(".w_tab_slide ul li:nth-child(2)").mouseleave(function () {
-    $(this).css({"background-position":"0 0","transition":"2s"});
+    $(this).css({"background-position":"0 0","transition":"1.5s"});
   });
   $(".w_tab_slide ul li:nth-child(3)").mouseenter(function () {
     $(this).css({"background-position":"none"});
@@ -416,7 +467,7 @@ $(document).ready(function () {
 
 
   //detail 버튼 클릭시 모달창 띄우기______________________________
-  $(".w_txt_slide>ul>li>span").click(function () {
+  $(".w_txt_slide>ul>li>.p_design").click(function () {
 
 
     w_pop = $(this).parent().index(); //detail버튼의 부모의 index
@@ -474,36 +525,62 @@ $(document).ready(function () {
 
 
 
+
+  /*_____________________________________________________responsive*/
+
+  //pc 화면(오버시 화면 올라가게)____________________
+  $(".page4 .r_pc_slide_in").mouseenter(function(){
+    $(this).css({"background-position":"0 100%","transition":"3s"});
+  });
+  $(".page4 .r_pc_slide_in").mouseleave(function(){
+    $(this).css({"background-position":"0 0","transition":"1s"});
+  });
+  
+  //tablet 화면(오버시 화면 올라가게)____________________
+  $(".page4 .r_tablet_slide_in").mouseenter(function(){
+    $(this).css({"background-position":"0 100%","transition":"3s"});
+  });
+  $(".page4 .r_tablet_slide_in").mouseleave(function(){
+    $(this).css({"background-position":"0 0","transition":"1s"});
+  });
+  
+  //phone 화면(오버시 화면 올라가게)____________________
+  $(".page4 .r_phone_slide_in").mouseenter(function(){
+    $(this).css({"background-position":"0 100%","transition":"3s"});
+  });
+  $(".page4 .r_phone_slide_in").mouseleave(function(){
+    $(this).css({"background-position":"0 0","transition":"1s"});
+  });
+  
+
+
+
+
+
+
+
   /*________________________________________________________MOBILE*/
 
 
-  $(".mobile_btn .btn").click(function(){//각 메뉴를 클릭했을때
+  $(".page5 .mobile_btn .btn").click(function(){//각 메뉴를 클릭했을때
     $(this).next().show(); //다음 형제인 .pop을 보이게함
     $("html").css({overflowY:"hidden"});//body스크롤없앰
     return false;
   });
 
 
-  $(".mobile_btn .close").click(function(){//close눌렀을때
-    $(".pop").hide(); //.pop을 안보이게함
+  $(".page5 .mobile_btn .close").click(function(){//close눌렀을때
+    $(".page5 .mo_pop").hide(); //.pop을 안보이게함
     $("html").css({"overflow-y":"scroll"});//body스크롤생김   
   });
 
   
   /*검정 배경 클릭시 닫기*/
-  $(".mobile_btn .pop").click(function(){
+  $(".page5 .mobile_btn .mo_pop").click(function(){
     $("html").css({"overflow-y":"scroll"});
-    $(".pop").hide();
+    $(".page5 .mo_pop").hide();
     return false;
   });
-
-
-
-
-
-
-
-
 
 
 
