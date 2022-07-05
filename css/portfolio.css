@@ -322,7 +322,7 @@ h2 {
   width:1300px;
   height:100%;
   margin:0 auto;
-  border:1px solid #fff;
+/*   border:1px solid #fff; */
 }
 
 
@@ -1217,16 +1217,26 @@ h2 {
   width:200px;
   height:40px;
   line-height:40px;
-  border:1px solid #fff;
+  border:1px solid rgb(120, 146, 224);
   font-size:24px;
   margin-top:10px;
   padding:5px 24px;
   text-align:center;
   cursor: pointer;
-  color:#fff;
+  color:rgb(120, 146, 224);
 }
 
+.res_right .res_btn li:hover{
+  background:rgb(179, 191, 227);
+  color:#fff;
+  border:rgb(179, 191, 227);
+}
 
+.res_right .res_btn .tabletbt, .res_right .res_btn .mobilebt{
+  display:inline-block;
+  width:70px;
+  margin-right:6px;
+}
 
 /*______________________________________________________mobile*/
 
@@ -1272,13 +1282,19 @@ h2 {
   width:200px;
   height:40px;
   line-height:40px;
-  border:1px solid #fff;
+  border:1px solid rgb(120, 146, 224);
   font-size:24px;
   margin-top:10px;
   padding:5px 24px;
   text-align:center;
   cursor: pointer;
+  color:rgb(120, 146, 224);
+}
+
+.page5 .mobile_btn li:hover{
+  background:rgb(179, 191, 227);
   color:#fff;
+  border:1px solid rgb(179, 191, 227);
 }
 
 
